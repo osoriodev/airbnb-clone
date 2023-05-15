@@ -6,7 +6,7 @@ import Item from "./Item";
 import { useCallback, useState } from "react";
 import useRegModal from "@/hooks/useRegModal";
 
-const User = () => {
+const Menu = () => {
   const regModal = useRegModal();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -47,4 +47,4 @@ const User = () => {
   )
 }
 
-export default User;
+export default Menu;
