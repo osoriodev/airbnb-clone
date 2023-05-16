@@ -1,6 +1,6 @@
 'use client';
 
-import { User } from "@prisma/client";
+import { SafeUser } from "@/app/types";
 
 import Container from "../Container";
 import Logo from "./Logo";
@@ -8,7 +8,7 @@ import Nav from "./Nav";
 import Menu from "./Menu";
 
 interface HeaderProps {
-  currentUser?: User | null
+  currentUser?: SafeUser | null
 }
 
 const Header: React.FC<HeaderProps> = ({ currentUser }) => {
