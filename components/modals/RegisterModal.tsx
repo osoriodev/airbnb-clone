@@ -1,16 +1,21 @@
 'use client';
 
 import axios from "axios";
+import { signIn } from "next-auth/react";
 import { useCallback, useState } from "react";
-import { AiFillGithub } from "react-icons/ai";
-import { FcGoogle } from "react-icons/fc";
+
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import { toast } from "react-hot-toast";
+
 import useRegModal from "@/hooks/useRegModal";
+
 import Modal from "./Modal";
 import Heading from "../Heading";
 import Input from "../inputs/Input";
 import Button from "../Button";
-import { toast } from "react-hot-toast";
+
+import { AiFillGithub } from "react-icons/ai";
+import { FcGoogle } from "react-icons/fc";
 
 const RegisterModal = () => {
   const regModal = useRegModal();
@@ -90,7 +95,7 @@ const RegisterModal = () => {
       />
       <Button
         label="Continue with GitHub"
-        onClick={() => {}}
+        onClick={() => signIn('github')}
         icon={AiFillGithub}
         outline
       />

@@ -1,10 +1,11 @@
 'use client';
 
 import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
-import { AiFillGithub } from "react-icons/ai";
-import { FcGoogle } from "react-icons/fc";
+
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import { toast } from "react-hot-toast";
 
 import useLoginModal from "@/hooks/useLoginModal";
 import useRegModal from "@/hooks/useRegModal";
@@ -14,8 +15,8 @@ import Heading from "../Heading";
 import Input from "../inputs/Input";
 import Button from "../Button";
 
-import { toast } from "react-hot-toast";
-import { useRouter } from "next/navigation";
+import { AiFillGithub } from "react-icons/ai";
+import { FcGoogle } from "react-icons/fc";
 
 const LoginModal = () => {
   const router = useRouter();
@@ -96,7 +97,7 @@ const LoginModal = () => {
       />
       <Button
         label="Continue with GitHub"
-        onClick={() => {}}
+        onClick={() => signIn('github')}
         icon={AiFillGithub}
         outline
       />

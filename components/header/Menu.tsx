@@ -1,14 +1,15 @@
 'use client';
 
-import { useCallback, useState } from "react";
-import { SafeUser } from "@/app/types";
 import { signOut } from "next-auth/react";
+import { useCallback, useState } from "react";
 
-import Avatar from "../Avatar";
-import Item from "./Item";
+import { SafeUser } from "@/app/types";
 
 import useLoginModal from "@/hooks/useLoginModal";
 import useRegModal from "@/hooks/useRegModal";
+
+import Avatar from "../Avatar";
+import Item from "./Item";
 
 import { AiOutlineMenu } from "react-icons/ai";
 
@@ -40,7 +41,7 @@ const Menu: React.FC<MenuProps> = ({ currentUser }) => {
         >
           <AiOutlineMenu />
           <span className="hidden md:block ml-3">
-            <Avatar />
+            <Avatar src={currentUser?.image} />
           </span>
         </button>
       </div>
