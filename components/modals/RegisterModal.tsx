@@ -8,6 +8,7 @@ import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 
 import useRegModal from "@/hooks/useRegModal";
+import useLoginModal from "@/hooks/useLoginModal";
 
 import Modal from "./Modal";
 import Heading from "../Heading";
@@ -19,6 +20,7 @@ import { FcGoogle } from "react-icons/fc";
 
 const RegisterModal = () => {
   const regModal = useRegModal();
+  const loginModal = useLoginModal();
   const [isLoading, setIsLoading] = useState(false);
 
   const {
@@ -48,6 +50,11 @@ const RegisterModal = () => {
       setIsLoading(false);
     })
   }
+
+  const toggle = useCallback(() => {
+    regModal.onClose();
+    loginModal.onOpen();
+  }, [loginModal, regModal]);
 
   const content = (
     <div className="flex flex-col gap-4">
@@ -103,7 +110,7 @@ const RegisterModal = () => {
         <p className="font-light text-neutral-500">Already have an account?</p>
         <button
           className="text-neutral-800 hover:underline"
-          onClick={regModal.onClose}
+          onClick={toggle}
         >
           Log in
         </button>

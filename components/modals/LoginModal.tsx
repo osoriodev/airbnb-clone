@@ -59,6 +59,11 @@ const LoginModal = () => {
     })
   }
 
+  const toggle = useCallback(() => {
+    loginModal.onClose();
+    regModal.onOpen();
+  }, [loginModal, regModal]);
+
   const content = (
     <div className="flex flex-col gap-4">
       <Heading
@@ -102,12 +107,12 @@ const LoginModal = () => {
         outline
       />
       <div className="flex items-center justify-center gap-2 mt-2">
-        <p className="font-light text-neutral-500">Already have an account?</p>
+        <p className="font-light text-neutral-500">First time using Airbnb?</p>
         <button
           className="text-neutral-800 hover:underline"
-          onClick={regModal.onClose}
+          onClick={toggle}
         >
-          Log in
+          Create an account
         </button>
       </div>
     </div>
