@@ -1,13 +1,16 @@
 'use client';
 
-import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const Logo = () => {
   const router = useRouter();
 
   return (
-    <button className="hidden md:block">
+    <button
+      className="hidden md:block"
+      onClick={() => router.push('/')}
+    >
       <Image
         width={100}
         height={31.25}
