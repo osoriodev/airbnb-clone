@@ -7,6 +7,7 @@ import { SafeUser } from "@/app/types";
 
 import useLoginModal from "@/hooks/useLoginModal";
 import useRegModal from "@/hooks/useRegModal";
+import useRentModal from "@/hooks/useRentModal";
 
 import Avatar from "../Avatar";
 import Item from "./Item";
@@ -20,18 +21,28 @@ interface MenuProps {
 const Menu: React.FC<MenuProps> = ({ currentUser }) => {
   const loginModal = useLoginModal();
   const regModal = useRegModal();
+  const rentModal = useRentModal();
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value);
   }, []);
 
+  const onRent = useCallback(() => {
+    if (!currentUser) {
+      return loginModal.onOpen();
+    }
+
+    rentModal.onOpen();
+  }, [currentUser, loginModal, rentModal]);
+
   return (
     <div className="relative">
       <div className="flex items-center gap-3">
         <button
           className="hidden md:block px-4 py-3 rounded-full text-sm font-semibold hover:bg-neutral-100 transition"
-          onClick={() => {}}
+          onClick={onRent}
         >
           Airbnb your home
         </button>
@@ -54,7 +65,7 @@ const Menu: React.FC<MenuProps> = ({ currentUser }) => {
                 <Item onClick={() => {}} label="My favorites" />
                 <Item onClick={() => {}} label="My reservations" />
                 <Item onClick={() => {}} label="My properties" />
-                <Item onClick={() => {}} label="Airbnb my home" />
+                <Item onClick={rentModal.onOpen} label="Airbnb my home" />
                 <hr />
                 <Item onClick={() => signOut()} label="Logout" />
               </>
