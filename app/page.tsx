@@ -23,10 +23,11 @@ export default async function Home() {
       <h1 className="sr-only">Listings</h1>
       <Container>
         <div className="grid grid-cols-cards gap-5 pt-2">
-          {listings.map((listing: any) => (
+          {listings.map((listing) => (
             <ListingCard
               key={listing.id}
               data={listing}
+              currentUser={currentUser}
             />
           ))}
         </div>
