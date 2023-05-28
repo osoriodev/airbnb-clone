@@ -2,6 +2,8 @@
 
 import { SafeUser } from "@/app/types";
 
+import useFavorite from "@/hooks/useFavorite";
+
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
 interface LikeProps {
@@ -10,8 +12,10 @@ interface LikeProps {
 }
 
 const Like: React.FC<LikeProps> = ({ listingId, currentUser }) => {
-  const isFavorite = false;
-  const toggleFavorite = () => {}
+  const { isFavorite, toggleFavorite } = useFavorite({
+    listingId,
+    currentUser
+  });
 
   return (
     <button
