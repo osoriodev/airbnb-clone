@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from "next/navigation";
 import { signOut } from "next-auth/react";
 import { useCallback, useState } from "react";
 
@@ -19,6 +20,7 @@ interface MenuProps {
 }
 
 const Menu: React.FC<MenuProps> = ({ currentUser }) => {
+  const router = useRouter();
   const loginModal = useLoginModal();
   const regModal = useRegModal();
   const rentModal = useRentModal();
@@ -61,7 +63,10 @@ const Menu: React.FC<MenuProps> = ({ currentUser }) => {
           <div className="flex flex-col">
             {currentUser ? (
               <>
-                <Item onClick={() => {}} label="My trips" />
+                <Item
+                  onClick={() => router.push('/trips')}
+                  label="My trips"
+                />
                 <Item onClick={() => {}} label="My favorites" />
                 <Item onClick={() => {}} label="My reservations" />
                 <Item onClick={() => {}} label="My properties" />
