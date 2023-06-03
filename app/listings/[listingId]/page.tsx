@@ -18,7 +18,6 @@ const ListingPage = async ({ params }: { params: IParams }) => {
   if (!listing) {
     return (
       <main>
-        <h1 className="sr-only">Invalid listing</h1>
         <Empty />
       </main>
     )

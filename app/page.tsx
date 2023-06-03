@@ -12,7 +12,6 @@ export default async function Home() {
   if (listings.length === 0) {
     return (
       <main>
-        <h1 className="sr-only">Listings</h1>
         <Empty showReset />
       </main>
     )

@@ -2,7 +2,6 @@
 
 import { useRouter } from "next/navigation";
 
-import Heading from "./Heading";
 import Button from "./Button";
 
 interface EmptyProps {
@@ -19,12 +18,9 @@ const Empty: React.FC<EmptyProps> = ({
   const router = useRouter();
 
   return (
-    <div className="h-[60vh] flex flex-col gap-2 items-center justify-center">
-      <Heading
-        title={title}
-        subtitle={subtitle}
-        center
-      />
+    <div className="h-[60vh] flex flex-col gap-2 items-center justify-center text-center">
+      <h1 className="text-3xl font-bold">{title}</h1>
+      <p className="text-neutral-500">{subtitle}</p>
       <div className="w-48 mt-4">
         {showReset && (
           <Button

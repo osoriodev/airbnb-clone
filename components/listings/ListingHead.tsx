@@ -29,8 +29,8 @@ const ListingHead: React.FC<ListingHeadProps> = ({
   return (
     <>
       <div>
-        <h1 className="text-2xl font-bold">{title}</h1>
-        <p className="mt-2 font-light text-neutral-500">
+        <h1 className="text-3xl font-bold">{title}</h1>
+        <p className="mt-2 text-neutral-500">
           {`${location?.label}, ${location?.region}`}
         </p>
       </div>
