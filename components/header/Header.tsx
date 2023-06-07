@@ -5,7 +5,7 @@ import { SafeUser } from "@/app/types";
 import Container from "../Container";
 import Categories from "./Categories";
 import Logo from "./Logo";
-import Nav from "./Nav";
+import Search from "./Search";
 import Menu from "./Menu";
 
 interface HeaderProps {
@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = ({ currentUser }) => {
       <Container>
         <div className="flex items-center justify-between gap-4 py-4">
           <Logo />
-          <Nav />
+          <Search />
           <Menu currentUser={currentUser} />
         </div>
       </Container>
