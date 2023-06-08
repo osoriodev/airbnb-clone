@@ -15,7 +15,7 @@ const FavoritesClient: React.FC<FavoritesClientProps> = ({
   currentUser
 }) => {
   return (
-    <main>
+    <main className="pt-28 pb-8">
       <Container>
         <h1 className="text-3xl font-bold">Favorites</h1>
         <p className="mt-2 text-neutral-500">

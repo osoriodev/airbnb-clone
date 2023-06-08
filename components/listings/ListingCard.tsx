@@ -60,13 +60,14 @@ const ListingCard: React.FC<ListingCardProps> = ({
   }, [reservation]);
 
   return (
-    <article className="flex flex-col gap-2 group">
+    <article className="flex flex-col gap-2">
       <div className="w-full relative rounded-xl aspect-square overflow-hidden">
         <Image
           fill
           src={data.imageSrc}
           alt="Listing"
-          className="w-full h-full object-cover group-hover:scale-110 transition"
+          className="w-full h-full object-cover transition hover:scale-105 cursor-pointer"
+          onClick={() => router.push(`/listings/${data.id}`)}
         />
         <div className="absolute top-3 right-3">
           <Like
@@ -77,7 +78,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
       </div>
       <h2>
         <button
-          className="font-semibold text-lg"
+          className="font-semibold text-lg hover:underline"
           onClick={() => router.push(`/listings/${data.id}`)}
         >
           {location?.label}, {location?.region}

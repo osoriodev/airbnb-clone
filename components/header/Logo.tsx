@@ -8,7 +8,7 @@ const Logo = () => {
 
   return (
     <button
-      className="hidden md:block"
+      className="block"
       onClick={() => router.push('/')}
     >
       <Image

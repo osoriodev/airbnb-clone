@@ -14,7 +14,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ currentUser }) => {
   return (
-    <header className="w-full fixed bg-white shadow-sm">
+    <header className="w-full fixed bg-white shadow-sm z-10">
       <Container>
         <div className="flex items-center justify-between gap-4 py-4">
           <Logo />

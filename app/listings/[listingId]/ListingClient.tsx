@@ -105,7 +105,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
   }, [listing.category]);
 
   return (
-    <main className="pt-32 pb-12">
+    <main className="pt-28 pb-8">
       <Container>
         <div className="max-w-screen-lg mx-auto flex flex-col gap-6">
           <ListingHead

@@ -22,10 +22,10 @@ const Home = async ({ searchParams }: HomeProps) => {
   }
 
   return (
-    <main className="pt-52 pb-20">
+    <main className="pt-52 pb-8">
       <h1 className="sr-only">Listings</h1>
       <Container>
-        <div className="grid grid-cols-cards gap-5 pt-2">
+        <div className="grid grid-cols-cards gap-5">
           {listings.map((listing) => (
             <ListingCard
               key={listing.id}

@@ -39,13 +39,13 @@ const PropertiesClient: React.FC<PropertiesClientProps> = ({
   }, [router]);
 
   return (
-    <main>
+    <main className="pt-28 pb-8">
       <Container>
         <h1 className="text-3xl font-bold">Properties</h1>
         <p className="mt-2 text-neutral-500">
           List of your properties
         </p>
-        <div className="grid grid-cols-cards mt-10">
+        <div className="grid grid-cols-cards gap-5 mt-10">
           {listings.map(item => (
             <ListingCard
               key={item.id}

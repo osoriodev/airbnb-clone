@@ -60,7 +60,7 @@ const Modal: React.FC<ModalProps> = ({
 
   return (
     <>
-      <div className="grid place-items-center fixed inset-0 bg-neutral-800/70">
+      <div className="grid place-items-center fixed inset-0 bg-neutral-800/70 z-20">
         <div className="w-full max-w-lg h-full md:h-auto">
           <div
             className={`

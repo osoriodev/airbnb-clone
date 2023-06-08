@@ -39,13 +39,13 @@ const TripsClient: React.FC<TripsClientProps> = ({
   }, [router]);
 
   return (
-    <main>
+    <main className="pt-28 pb-8">
       <Container>
         <h1 className="text-3xl font-bold">Trips</h1>
         <p className="mt-2 text-neutral-500">
           Where you've been and where you're going
         </p>
-        <div className="grid grid-cols-cards mt-10">
+        <div className="grid grid-cols-cards gap-5 mt-10">
           {reservations.map(item => (
             <ListingCard
               key={item.id}
