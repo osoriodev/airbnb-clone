@@ -77,6 +77,7 @@ const Modal: React.FC<ModalProps> = ({
                 <button
                   className="p-1 absolute right-5 transition hover:opacity-70"
                   onClick={handleClose}
+                  aria-label="Close modal"
                 >
                   <IoMdClose size={18} />
                 </button>

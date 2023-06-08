@@ -51,6 +51,7 @@ const CounterInput: React.FC<CounterInputProps> = ({
             transition
           "
           onClick={onReduce}
+          aria-label="Minus"
         >
           <AiOutlineMinus />
         </button>
@@ -70,6 +71,7 @@ const CounterInput: React.FC<CounterInputProps> = ({
             transition
           "
           onClick={onAdd}
+          aria-label="Plus"
         >
           <AiOutlinePlus />
         </button>

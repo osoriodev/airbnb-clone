@@ -51,6 +51,7 @@ const Menu: React.FC<MenuProps> = ({ currentUser }) => {
         <button
           className="flex items-center p-2 md:py-1 border-[1px] border-neutral-200 rounded-full hover:shadow-md transition"
           onClick={toggleOpen}
+          aria-label="Menu"
         >
           <AiOutlineMenu />
           <span className="hidden md:block ml-3">

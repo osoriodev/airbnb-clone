@@ -21,6 +21,7 @@ const Like: React.FC<LikeProps> = ({ listingId, currentUser }) => {
     <button
       className="relative hover:opacity-80 transition"
       onClick={toggleFavorite}
+      aria-label={isFavorite ? 'Unmark as favorite' : 'Mark as favorite'}
     >
       <AiOutlineHeart
         size={28}
