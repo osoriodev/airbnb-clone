@@ -43,7 +43,7 @@ const TripsClient: React.FC<TripsClientProps> = ({
       <Container>
         <h1 className="text-3xl font-bold">Trips</h1>
         <p className="mt-2 text-neutral-500">
-          Where you've been and where you're going
+          Where you&apos;ve been and where you&apos;re going
         </p>
         <div className="grid grid-cols-cards gap-5 mt-10">
           {reservations.map(item => (
