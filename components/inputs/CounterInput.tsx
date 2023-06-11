@@ -38,8 +38,8 @@ const CounterInput: React.FC<CounterInputProps> = ({
       <div className="flex items-center gap-4">
         <button
           className="
-            w-10
-            h-10
+            w-8
+            h-8
             flex
             items-center
             justify-center
@@ -58,8 +58,8 @@ const CounterInput: React.FC<CounterInputProps> = ({
         <p className="text-xl font-light text-neutral-600">{value}</p>
         <button
           className="
-            w-10
-            h-10
+            w-8
+            h-8
             flex
             items-center
             justify-center

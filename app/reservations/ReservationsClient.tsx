@@ -45,7 +45,7 @@ const ReservationsClient: React.FC<ReservationsClientProps> = ({
         <p className="mt-2 text-neutral-500">
           Bookings on your properties
         </p>
-        <div className="grid grid-cols-cards gap-5 mt-10">
+        <div className="grid grid-cols-cards gap-5 mt-8">
           {reservations.map(item => (
             <ListingCard
               key={item.id}

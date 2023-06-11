@@ -127,7 +127,7 @@ const RentModal = () => {
   let content = (
     <div className="flex flex-col gap-8">
       <Heading
-        title="Find the best place to stay"
+        title="Add your own place"
         subtitle="Pick a category"
       />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-[50vh] pb-[1px] overflow-y-auto">

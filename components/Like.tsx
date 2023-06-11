@@ -19,7 +19,7 @@ const Like: React.FC<LikeProps> = ({ listingId, currentUser }) => {
 
   return (
     <button
-      className="relative hover:opacity-80 transition"
+      className="block relative hover:opacity-80 transition"
       onClick={toggleFavorite}
       aria-label={isFavorite ? 'Unmark as favorite' : 'Mark as favorite'}
     >

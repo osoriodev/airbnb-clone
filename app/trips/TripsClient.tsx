@@ -45,7 +45,7 @@ const TripsClient: React.FC<TripsClientProps> = ({
         <p className="mt-2 text-neutral-500">
           Where you&apos;ve been and where you&apos;re going
         </p>
-        <div className="grid grid-cols-cards gap-5 mt-10">
+        <div className="grid grid-cols-cards gap-5 mt-8">
           {reservations.map(item => (
             <ListingCard
               key={item.id}

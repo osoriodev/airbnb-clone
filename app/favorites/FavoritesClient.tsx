@@ -21,7 +21,7 @@ const FavoritesClient: React.FC<FavoritesClientProps> = ({
         <p className="mt-2 text-neutral-500">
           List of places you have favorited!
         </p>
-        <div className="grid grid-cols-cards gap-5 mt-10">
+        <div className="grid grid-cols-cards gap-5 mt-8">
           {listings.map(item => (
             <ListingCard
               key={item.id}
