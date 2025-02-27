@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 
 import Header from "@/components/header/Header"
+import Footer from "@/components/Footer"
 
 import LoginModal from "@/components/modals/LoginModal"
 import RegisterModal from "@/components/modals/RegisterModal"
@@ -35,6 +36,7 @@ export default async function RootLayout({
         <SearchModal />
         <ToasterProvider />
         {children}
+        <Footer />
       </body>
     </html>
   )
